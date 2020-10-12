@@ -11,17 +11,23 @@
 </head>
 
 <body>
+  <!-- HI SCORE LINK AND TIMER ON TOP OF PAGE-->
   <div class="row">
-    <div class="col-sm-2"></div>
     <div class="col-sm-4 float-left" id="high-score-link">
-      <a href="./highscores.html" alt="high score link"> High Score</a>
+      <a class="float-left ml-sm-4 h1" href="./highscores.html"> High Score</a>
     </div>
+    <div class="col-sm-2"></div>
     <div class="col-sm-2"></div>
     <div class="col-sm-4 float-right">
-      <p class="" id="timer">Timer: </p>
+      <p class="float-right mr-sm-5 h1" id="timer">Timer</p>
     </div>
   </div>
+
+  <!-- Begin Greeting Section-->
   <div id="greeting-wrapper">
+    <br>
+    <br>
+    <br>
     <div class="row">
       <h1 class="col-sm-12 text-center">CODING QUIZ CHALLENGE</h1>
     </div>
@@ -32,40 +38,44 @@
         penalize your scoretime by ten seconds!</P>
     </div>
 
-    <div class="row text-center center-buttons">
-      <button id="startbtn" type="submit" class="btn btn-primary">START</button>
+    <div class="row text-center ">
+      <div class="col-sm-12">
+        <button id="startbtn" type="submit" class="btn btn-primary">START</button>
+      </div>
     </div>
   </div>
 
+
+  <!--Begin Quiz Section-->
   <div id="quiz-wrapper">
     <br>
     <br>
     <br>
     <div class="row">
-      <h1 id="question" class="col-sm-12 text-center ml-md-5"></h1>
+      <h1 id="question" class="col-sm-12 text-center text-wrap "></h1>
     </div>
 
     <div class="row">
-      <div id="filler div" class="col-sm-2"></div>
+      <div id="filler-div" class="col-sm-2"></div>
       <ul id="option-list" class="list-group col-sm-8 text-center ml-md-5"></ul>
     </div>
 
     <div class="row">
-      <h2 id="question-result" class="col-sm-12 text-center ml-md-5" ></h2>
+      <h2 id="question-result" class="col-sm-12 text-center ml-md-5"></h2>
     </div>
 
   </div>
-
+  <!-- Begin Game Over Screen + Formf-->
   <div class="row">
     <h1 class="col-sm-12 text-center" id="game-over"></h1>
   </div>
-<br>
-<br>
-<br>
+  <br>
+  <br>
+  <br>
   <div class="hidden" id="form-wrapper">
     <form id="center-form">
       <div class="form-group">
-        <label for="initials">Please enter your initials: </label>
+        <label for="initials">Please enter your name: </label>
         <input type="text" id="initials" name="initials">
       </div>
     </form>
@@ -74,6 +84,9 @@
       <button id='show-high_score' type="submit" class="btn btn-primary text-center center-buttons"> Submit</button>
     </div>
   </div>
+
+
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>

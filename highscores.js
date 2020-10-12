@@ -1,4 +1,3 @@
-
 var high_score = localStorage.getItem("Score");
 var backbutton = document.querySelector("#backbtn")
 var clearbutton = document.querySelector("#clearbtn")
@@ -8,33 +7,31 @@ var contentUl = document.createElement("ul")
 var highscoresCont = document.querySelector("#high-scores-container")
 
 
-
+// Check if high score is null, if not, render high scores to page
 if (high_score != null) {
-for (i = 0; i < high_score.length; i++) {
-    
-    var contentLi = document.createElement("li")
-    contentLi.setAttribute("type", "button");
+    for (i = 0; i < high_score.length; i++) {
 
-    contentLi.textContent = "Name: " + high_score[i].initials +  " Score: " + high_score[i].score;
-    contentUl.append(contentLi)
-}
-}
+        var contentLi = document.createElement("li")
+        contentLi.setAttribute("type", "button");
+        contentLi.setAttribute("class", "h3");
 
-else {
 
-   //do nothing - this is to fix a bug where the page wouldn't load because the highscores object would be null if you cleared local storage.
-
+        contentLi.textContent = "Name: " + high_score[i].initials + " Score: " + high_score[i].score;
+        contentUl.append(contentLi)
+    }
 }
 
-body.append(contentUl)
 
-backbutton.addEventListener("click", function(){
-    window.location.href='./index.html'
+//place high scores in a div container
+highscoresCont.append(contentUl)
+
+//add behavior to buttons
+backbutton.addEventListener("click", function () {
+    window.location.href = './index.html'
 });
 
-clearbutton.addEventListener('click', function(){
+clearbutton.addEventListener('click', function () {
     localStorage.clear();
-    alert("Highscores have been cleared!")
+    alert("Highscores have been cleared")
     location.reload();
 });
-  

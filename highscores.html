@@ -12,17 +12,28 @@
 
 <body>
 
+    <!-- Title of Page-->
     <header class="row">
-        <h1 class="col-sm-12 text-center"> High Scores</h1>
+        <h1 class="col-sm-12 text-center ml-sm-5"> High Scores </h1>
     </header>
 
-    <div id="high-scores-container" class="row">
+    <!--High Scores section dynamically populated via JS-->
+    <div class="row">
+        <div class="col-sm-12 text-center ml-sm-3" id="high-scores-container">
 
-
+        </div>
     </div>
 
-    <button class="btn btn-primary center-buttons" id="backbtn">Back</button>
-    <button class="btn btn-primary" id="clearbtn center-buttons">clear</button>
+    <br>
+<!-- Back and Clear buttons-->
+    <div class="row">
+        <div class="col-sm-6">
+            <button class="btn btn-primary center-buttons" id="backbtn">Back</button>
+        </div>
+        <div class="col-sm-6">
+            <button class="btn btn-primary center-buttons" id="clearbtn">clear</button>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
