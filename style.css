@@ -1,0 +1,15 @@
+
+
+.hidden {
+    display: none;
+
+}
+
+.center-buttons{
+    margin-left: 50%;
+    text-align: center;
+}
+
+#center-form{
+    text-align: center;
+}
